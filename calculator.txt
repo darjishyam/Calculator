@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>
+Calculator Made by the professor
+</title>
+<style>
+.tab{
+height: 550px;
+width: 800px;
+background-color: rgba(48,114,33,0.413);
+border: 10px dashed rgb(244,248,5);
+}
+input[type="button"]{
+height: 80px;
+width: 140px;
+font-size: 50px;
+color: red;
+background-color: black;
+}
+input[type="text"]{
+height: 100px;
+width: 600px;
+font-size: 50px;
+background-color: rgb(173,27,134);
+}
+.img{
+background-image: radial-gradient(red,green,rgb(72,27,65)rgb(90,135,38),black);
+}
+</style>
+<script>
+function dis(a){
+document.getElementById('val').value+=a;
+}
+function solve(){
+var a=document.getElementById('val').value;
+var x=eval(a);
+document.getElementById('val').value=x;
+}
+function clr(){
+document.getElementById('val').value="";
+}
+</script>
+</head>
+<body class="img">
+<center>
+<font size="30"color="pink">
+<marquee scrollamount="10"bgcolor="black">Made By Professor...</marquee>
+</font>
+<table class="tab">
+<tr>
+<td colspan="3"><input type="text"id="val">
+<td><input type="button"value=C onclick="clr()">
+</tr>
+<tr>
+<td><input type="button"value="9"onclick="dis('9')">
+<td><input type="button"value="8"onclick="dis('8')">
+<td><input type="button"value="7"onclick="dis('7')">
+<td><input type="button"value="*"onclick="dis('*')">
+</tr>
+<tr>
+<td><input type="button"value="6"onclick="dis('6')">
+<td><input type="button"value="5"onclick="dis('5')">
+<td><input type="button"value="4"onclick="dis('4')">
+<td><input type="button"value="+"onclick="dis('+')">
+</tr>
+<tr>
+<td><input type="button"value="3"onclick="dis('3')">
+<td><input type="button"value="2"onclick="dis('2')">
+<td><input type="button"value="1"onclick="dis('1')">
+<td><input type="button"value="-"onclick="dis('-')">
+</tr>
+<tr>
+<td><input type="button"value="0"onclick="dis('0')">
+<td><input type="button"value="/"onclick="dis('/')">
+<td><input type="button"value="."onclick="dis('.')">
+<td><input type="button"value="="onclick="solve('=')">
+</tr>
+</table>
+</body>
+</html>
+
